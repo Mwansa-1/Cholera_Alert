@@ -25,6 +25,11 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    #Your Model Identity
+    class Meta:
+        verbose_name = ("Blog")
+        verbose_name_plural = ("Blogs")
+  
     
 
 # A report model is needed for the report section 

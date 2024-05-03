@@ -2,6 +2,17 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # Listing
+    #-----------
+    path("submitted_results_view/", views.Submitted_ResultsList.as_view(), name="submitted_result-view"),
+    path("device_results_view/", views.Device_ResultsList.as_view(), name="device_results-view"),
+    path("blog_view/", views.BlogList.as_view(), name="blog-view"),
+    path("provinces_view/", views.ProvincesList.as_view(), name="provinces-view"),
+    path("previous_tests_view/", views.Previous_TestList.as_view(), name="previous_tests-view"),
+    path("alert_view/", views.AlertList.as_view(), name="alert-view"),
+
+
+
     # Creating
     #-----------
     path("submitted_results/", views.Submitted_ResultsListCreate.as_view(), name="submitted_result-view-create"),

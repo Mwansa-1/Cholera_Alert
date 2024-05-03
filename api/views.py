@@ -4,6 +4,34 @@ from .models import Alert , Previous_Test , Provinces , Submitted_Results , Devi
 from .serializers import Submitted_ResultsSerializer , Device_ResultsSerializer , BlogSerializer, ProvincesSerializer , Previous_TestSerializer , AlertSerializer
 # Create your views here.
 
+# LISTING
+#----------
+
+class Submitted_ResultsList(generics.ListAPIView):
+    queryset = Submitted_Results.objects.all()
+    serializer_class = Submitted_ResultsSerializer
+
+class Device_ResultsList(generics.ListAPIView):
+    queryset = Device_Results.objects.all()
+    serializer_class = Device_ResultsSerializer
+
+class BlogList(generics.ListAPIView):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+
+class ProvincesList(generics.ListAPIView):
+    queryset = Provinces.objects.all()
+    serializer_class = ProvincesSerializer
+
+class Previous_TestList(generics.ListAPIView):
+    queryset = Previous_Test.objects.all()
+    serializer_class = Previous_TestSerializer
+
+class AlertList(generics.ListAPIView):
+    queryset = Alert.objects.all()
+    serializer_class = AlertSerializer
+    
+
 # CREATING 
 #----------
 

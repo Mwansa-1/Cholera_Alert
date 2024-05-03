@@ -1,0 +1,8 @@
+- How does the app work
+	- After the device has done the procedures for mixing the chemicals and testing the sample , the esp32 will take a photo and send it to the phone via bluetooth. 
+	- The phone will receive the photo and it will be saved in a specified folder . 
+	- The open cv program will then be called in that function to work on the new photo that has been uploaded to the folder which it will also have access to . 
+	- After it has worked on the photo it has received it will then be put in a dart form together with the user details and the form that they had filled in . 
+	- The previous tests will also be saved on the device and uploaded to the online backend when there is an internet connection.
+	- If there is no internet connection the app will wait for an internet connection and send the result in JSON format to the django form.
+	
