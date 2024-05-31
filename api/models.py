@@ -58,8 +58,9 @@ class Device_Results(models.Model):
 
 # A test model to show the previous tests
 class Previous_Test(models.Model):
-    submitted = models.ForeignKey('Submitted_Results',on_delete=models.CASCADE)
-    device_test = models.ForeignKey('Device_Results',on_delete=models.CASCADE)
+    test = models.TextField(max_length=50 , blank=True, null=True)
+    submitted = models.ForeignKey('Submitted_Results',on_delete=models.CASCADE,blank=True, null=True)
+    device_test = models.ForeignKey('Device_Results',on_delete=models.CASCADE, blank=True, null=True)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
   
     
