@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     # Listing
@@ -31,3 +33,6 @@ urlpatterns = [
     path("previous_tests/<int:pk>", views.Previous_TestUpdateDestroy.as_view(), name="previous_tests-view-update"),
     path("alert/<int:pk>", views.AlertUpdateDestroy.as_view(), name="alert-view-update"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
